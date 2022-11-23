@@ -1,4 +1,310 @@
+.s1 {
+    color: #0070C0;
+    font-family: "Times New Roman", serif;
+    font-style: normal;
+    font-weight: normal;
+    text-decoration: none;
+    font-size: 18px;
+  }
+
+  .s3 {
+    color: #333;
+    font-family: "Times New Roman", serif;
+    font-style: normal;
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 16px;
+  }
+
+  .s4 {
+    color: #BE8851;
+    font-family: "Times New Roman", serif;
+    font-style: italic;
+    font-weight: normal;
+    text-decoration: none;
+    font-size: 16px;
+  }
+
+  .s5 {
+    color: #0070C0;
+    font-family: "Times New Roman", serif;
+    font-style: normal;
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 16px;
+  }
+  .s5-small {
+    color: #0070C0;
+    font-family: "Times New Roman", serif;
+    font-style: normal;
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 14px;
+  }
+
+  .s6 {
+    color: #333;
+    font-family: "Times New Roman", serif;
+    font-style: normal;
+    font-weight: normal;
+    text-decoration: none;
+    font-size: 18px;
+  }
+
+  .s7 {
+    color: #333;
+    font-family: "Times New Roman", serif;
+    font-style: normal;
+    font-weight: normal;
+    text-decoration: none;
+    font-size: 18px;
+  }
+
+  .s8 {
+    color: #333;
+    font-family: "Times New Roman", serif;
+    font-style: normal;
+    font-weight: normal;
+    text-decoration: underline;
+    font-size: 16px;
+  }
+
+  .s9 {
+    color: #333;
+    font-family: "Times New Roman", serif;
+    font-style: normal;
+    font-weight: normal;
+    text-decoration: none;
+    font-size: 16px;
+  }
+
+  .s10 {
+    color: #333;
+    font-family: "Times New Roman", serif;
+    font-style: normal;
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 19px;
+    vertical-align: -9px;
+  }
+
+  .s11 {
+    color: #0070C0;
+    font-family: "Times New Roman", serif;
+    font-style: normal;
+    font-weight: normal;
+    text-decoration: none;
+    font-size: 16px;
+  }
+
+  .s12 {
+    color: #333;
+    font-family: "Times New Roman", serif;
+    font-style: normal;
+    font-weight: normal;
+    text-decoration: none;
+    font-size: 16px;
+    vertical-align: 4px;
+  }
+
+  .s13 {
+    color: #333;
+    font-family: "Times New Roman", serif;
+    font-style: normal;
+    font-weight: normal;
+    text-decoration: none;
+    font-size: 16px;
+    vertical-align: -4px;
+  }
+
+  .s14 {
+    color: #0070C0;
+    font-family: "Times New Roman", serif;
+    font-style: normal;
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 16px;
+    vertical-align: 4px;
+  }
+
+  .s15 {
+    color: #0070C0;
+    font-family: "Times New Roman", serif;
+    font-style: normal;
+    font-weight: normal;
+    text-decoration: none;
+    font-size: 16px;
+  }
+
+  .s16 {
+    color: #333;
+    font-family: "Times New Roman", serif;
+    font-style: normal;
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 16px;
+  }
+
+  .s17 {
+    color: #FFF;
+    font-family: "Times New Roman", serif;
+    font-style: normal;
+    font-weight: normal;
+    text-decoration: none;
+    font-size: 16px;
+  }
+
+  .s18 {
+    color: #0070C0;
+    font-family: "Times New Roman", serif;
+    font-style: normal;
+    font-weight: normal;
+    text-decoration: none;
+    font-size: 16px;
+    vertical-align: -4px;
+  }
+
+  .s19 {
+    color: #0070C0;
+    font-family: "Times New Roman", serif;
+    font-style: normal;
+    font-weight: normal;
+    text-decoration: none;
+    font-size: 16px;
+    vertical-align: 4px;
+  }
+
+  .s20 {
+    color: black;
+    font-family: "Times New Roman", serif;
+    font-style: normal;
+    font-weight: normal;
+    text-decoration: none;
+    font-size: 10px;
+  }
+
+  .s21 {
+    color: black;
+    font-family: "Times New Roman", serif;
+    font-style: normal;
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 16px;
+  }
+
+  .s22 {
+    color: #333;
+    font-family: "Times New Roman", serif;
+    font-style: normal;
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 16px;
+  }
+
+  p {
+    color: #0070C0;
+    font-family: "Times New Roman", serif;
+    font-style: italic;
+    font-weight: normal;
+    text-decoration: none;
+    font-size: 16px;
+    margin: 0px;
+  }
+
+  h1 {
+    color: #999;
+    font-family: "Times New Roman", serif;
+    font-style: normal;
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 16px;
+  }
+
+  .s23 {
+    color: #999;
+    font-family: "Times New Roman", serif;
+    font-style: normal;
+    font-weight: normal;
+    text-decoration: none;
+    font-size: 16px;
+  }
+
+  li {
+    display: block;
+  }
+
+  #l1 {
+    padding-left: 0px;
+    counter-reset: c1 3;
+  }
+
+  #l1>li>*:first-child:before {
+    counter-increment: c1;
+    /* content: counter(c1, decimal)". "; */
+    color: #333;
+    font-family: "Times New Roman", serif;
+    font-style: normal;
+    font-weight: normal;
+    text-decoration: none;
+    font-size: 16px;
+  }
+
+  #l1>li:first-child>*:first-child:before {
+    /* counter-increment: c1 0; */
+  }
+
+  li {
+    display: block;
+  }
+
+  #l2 {
+    padding-left: 0px;
+    counter-reset: d1 1;
+  }
+
+  #l2>li>*:first-child:before {
+    counter-increment: d1;
+    content: counter(d1, decimal)" ";
+    color: #0070C0;
+    font-family: "Times New Roman", serif;
+    font-style: normal;
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 16px;
+    vertical-align: -4px;
+  }
+
+  #l2>li:first-child>*:first-child:before {
+    counter-increment: d1 0;
+  }
+
+  table,
+  tbody {
+    vertical-align: top;
+    overflow: visible;
+  }
+
+.tick{
+    height: 25px;
+    width: 25px;
+}
+.text{
+    padding: 0 10px;
+}
+
 .credit-account-details-table{
+    margin: 0 50px;
+    border: 1px solid #e4e4e4;
+}
+.payment-history{
+    margin: 0 50px;
+    border: 1px solid #e4e4e4;
+}
+.CREDIT-history{
+    margin: 0 50px;
+    border: 1px solid #e4e4e4;
+}
+.non-credit-enquiry{
     margin: 0 50px;
     border: 1px solid #e4e4e4;
 }
@@ -21,9 +327,27 @@
     justify-content: space-between;
     padding: 5px 0;
 }
+.div-layout1{
+    display: flex;
+    justify-content: space-around;
+    padding: 5px 0;
+}
 .border-bottom{
     border-bottom: 1px solid #e4e4e4;
 }
 .div-layout span{
     font-family: "Times New Roman", serif;
+}
+.w-25{
+    width: 25%;
+}
+.sub-head-background{
+ background-color: #fafafa;
+}
+.margin-top-bot{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.legend-wrapper{
+    padding: 10px 0;
 }
