@@ -1,0 +1,977 @@
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>Report</title>
+  <link rel="stylesheet" href="./assets/packages/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="./assets//packages/css/font-awesome.min.css" />
+  <link rel="stylesheet" href="./assets//packages/css/swiper.min.css" />
+  <link rel="stylesheet" href="./assets//packages/css/font-awesome.min.css" />
+  <link rel="stylesheet" href="./assets//packages/css/report.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+  <link rel="stylesheet" href="./assets/packages/css/font-awesome-all.min.css" />
+  <script src="https://unpkg.com/chart.js@2.8.0/dist/Chart.bundle.js"></script>
+  <script src="https://unpkg.com/chartjs-gauge@0.3.0/dist/chartjs-gauge.js"></script>
+  <script src="./js/chart.js"></script>
+  <script src="./assets/packages/js/jquery-3.5.1.min.js"></script>
+  <script src="./assets/packages/js/popper.min.js"></script>
+  <script src="./assets/packages/js/bootstrap.min.js"></script>
+  <style type="text/css">
+    * {
+      margin: 0;
+      padding: 0;
+      text-indent: 0;
+    }
+
+    .s1 {
+      color: #0070C0;
+      font-family: "Times New Roman", serif;
+      font-style: normal;
+      font-weight: normal;
+      text-decoration: none;
+      font-size: 18px;
+    }
+
+    .s3 {
+      color: #333;
+      font-family: "Times New Roman", serif;
+      font-style: normal;
+      font-weight: bold;
+      text-decoration: none;
+      font-size: 16px;
+    }
+
+    .s4 {
+      color: #BE8851;
+      font-family: "Times New Roman", serif;
+      font-style: italic;
+      font-weight: normal;
+      text-decoration: none;
+      font-size: 16px;
+    }
+
+    .s5 {
+      color: #0070C0;
+      font-family: "Times New Roman", serif;
+      font-style: normal;
+      font-weight: bold;
+      text-decoration: none;
+      font-size: 16px;
+    }
+    .s5-small {
+      color: #0070C0;
+      font-family: "Times New Roman", serif;
+      font-style: normal;
+      font-weight: bold;
+      text-decoration: none;
+      font-size: 14px;
+    }
+
+    .s6 {
+      color: #333;
+      font-family: "Times New Roman", serif;
+      font-style: normal;
+      font-weight: normal;
+      text-decoration: none;
+      font-size: 18px;
+    }
+
+    .s7 {
+      color: #333;
+      font-family: "Times New Roman", serif;
+      font-style: normal;
+      font-weight: normal;
+      text-decoration: none;
+      font-size: 18px;
+    }
+
+    .s8 {
+      color: #333;
+      font-family: "Times New Roman", serif;
+      font-style: normal;
+      font-weight: normal;
+      text-decoration: underline;
+      font-size: 16px;
+    }
+
+    .s9 {
+      color: #333;
+      font-family: "Times New Roman", serif;
+      font-style: normal;
+      font-weight: normal;
+      text-decoration: none;
+      font-size: 16px;
+    }
+
+    .s10 {
+      color: #333;
+      font-family: "Times New Roman", serif;
+      font-style: normal;
+      font-weight: bold;
+      text-decoration: none;
+      font-size: 19px;
+      vertical-align: -9px;
+    }
+
+    .s11 {
+      color: #0070C0;
+      font-family: "Times New Roman", serif;
+      font-style: normal;
+      font-weight: normal;
+      text-decoration: none;
+      font-size: 16px;
+    }
+
+    .s12 {
+      color: #333;
+      font-family: "Times New Roman", serif;
+      font-style: normal;
+      font-weight: normal;
+      text-decoration: none;
+      font-size: 16px;
+      vertical-align: 4px;
+    }
+
+    .s13 {
+      color: #333;
+      font-family: "Times New Roman", serif;
+      font-style: normal;
+      font-weight: normal;
+      text-decoration: none;
+      font-size: 16px;
+      vertical-align: -4px;
+    }
+
+    .s14 {
+      color: #0070C0;
+      font-family: "Times New Roman", serif;
+      font-style: normal;
+      font-weight: bold;
+      text-decoration: none;
+      font-size: 16px;
+      vertical-align: 4px;
+    }
+
+    .s15 {
+      color: #0070C0;
+      font-family: "Times New Roman", serif;
+      font-style: normal;
+      font-weight: normal;
+      text-decoration: none;
+      font-size: 16px;
+    }
+
+    .s16 {
+      color: #333;
+      font-family: "Times New Roman", serif;
+      font-style: normal;
+      font-weight: bold;
+      text-decoration: none;
+      font-size: 16px;
+    }
+
+    .s17 {
+      color: #FFF;
+      font-family: "Times New Roman", serif;
+      font-style: normal;
+      font-weight: normal;
+      text-decoration: none;
+      font-size: 16px;
+    }
+
+    .s18 {
+      color: #0070C0;
+      font-family: "Times New Roman", serif;
+      font-style: normal;
+      font-weight: normal;
+      text-decoration: none;
+      font-size: 16px;
+      vertical-align: -4px;
+    }
+
+    .s19 {
+      color: #0070C0;
+      font-family: "Times New Roman", serif;
+      font-style: normal;
+      font-weight: normal;
+      text-decoration: none;
+      font-size: 16px;
+      vertical-align: 4px;
+    }
+
+    .s20 {
+      color: black;
+      font-family: "Times New Roman", serif;
+      font-style: normal;
+      font-weight: normal;
+      text-decoration: none;
+      font-size: 10px;
+    }
+
+    .s21 {
+      color: black;
+      font-family: "Times New Roman", serif;
+      font-style: normal;
+      font-weight: bold;
+      text-decoration: none;
+      font-size: 16px;
+    }
+
+    .s22 {
+      color: #333;
+      font-family: "Times New Roman", serif;
+      font-style: normal;
+      font-weight: bold;
+      text-decoration: none;
+      font-size: 16px;
+    }
+
+    p {
+      color: #0070C0;
+      font-family: "Times New Roman", serif;
+      font-style: italic;
+      font-weight: normal;
+      text-decoration: none;
+      font-size: 16px;
+      margin: 0px;
+    }
+
+    h1 {
+      color: #999;
+      font-family: "Times New Roman", serif;
+      font-style: normal;
+      font-weight: bold;
+      text-decoration: none;
+      font-size: 16px;
+    }
+
+    .s23 {
+      color: #999;
+      font-family: "Times New Roman", serif;
+      font-style: normal;
+      font-weight: normal;
+      text-decoration: none;
+      font-size: 16px;
+    }
+
+    li {
+      display: block;
+    }
+
+    #l1 {
+      padding-left: 0px;
+      counter-reset: c1 3;
+    }
+
+    #l1>li>*:first-child:before {
+      counter-increment: c1;
+      /* content: counter(c1, decimal)". "; */
+      color: #333;
+      font-family: "Times New Roman", serif;
+      font-style: normal;
+      font-weight: normal;
+      text-decoration: none;
+      font-size: 16px;
+    }
+
+    #l1>li:first-child>*:first-child:before {
+      /* counter-increment: c1 0; */
+    }
+
+    li {
+      display: block;
+    }
+
+    #l2 {
+      padding-left: 0px;
+      counter-reset: d1 1;
+    }
+
+    #l2>li>*:first-child:before {
+      counter-increment: d1;
+      content: counter(d1, decimal)" ";
+      color: #0070C0;
+      font-family: "Times New Roman", serif;
+      font-style: normal;
+      font-weight: bold;
+      text-decoration: none;
+      font-size: 16px;
+      vertical-align: -4px;
+    }
+
+    #l2>li:first-child>*:first-child:before {
+      counter-increment: d1 0;
+    }
+
+    table,
+    tbody {
+      vertical-align: top;
+      overflow: visible;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="">
+    <p style="text-indent: 0px;text-align: left;">
+      <p style="text-indent: 0px;text-align: left;"><span>
+          <table border="0" cellspacing="0" cellpadding="0" style="width:100%;">
+            <tr>
+              <td style="display:flex; align-items:center; justify-content:space-between; margin: 10px 50px;">
+                <img width="153" height="70" src="./img/logo.png">
+                <span style="font-size: 28px; color: #0070C0;">Experian Credit Report</span>
+              </td>
+            </tr>
+          </table>
+        </span></p>
+      <p class="s1" style="text-indent: 0px;text-align: right; border-top: 1px solid #E4E4E4;">
+        <div style="text-indent: 0px;text-align: right; margin: 10px 50px 0px;">
+          <span style="color: #0070C0; font-size: 14px;">Experian Report Number (ERN): </span>
+          <span style="color: #333; font-size: 14px;">15-11-2022</span>
+        </div>
+        <div style="text-indent: 0px;text-align: right; margin: 0px 50px;">
+          <span style="color: #0070C0; font-size: 14px;">Unique Transaction ID:</span>
+          <span style="color: #333; font-size: 14px;"> 464832366</span>
+        </div>
+        <div style="text-indent: 0px;text-align: right; margin: 0px 50px;">
+          <span style="color: #0070C0; font-size: 14px;">Report Created: </span>
+          <span style="color: #333; font-size: 14px;">15-11-2022</span>
+        </div>
+      </p>
+      <p style="text-indent: 0px;text-align: left;"><br /></p>
+      <table style="border-collapse:collapse; margin: 0 50px;" cellspacing="0">
+        <tr style="height:19px;">
+          <td
+            style="width:100%;border-top-style:solid;border-top-width:1px;border-top-color:#E4E4E4;border-left-style:solid;border-left-width:1px;border-left-color:#E4E4E4;border-bottom-style:solid;border-bottom-width:1px;border-bottom-color:#E4E4E4;border-right-style:solid;border-right-width:1px;border-right-color:#E4E4E4"
+            colspan="5">
+            <p class="s3"
+              style="padding-top: 4px;padding-left: 23px;text-indent: 0px;text-align: left; background-color: #fafafa;">
+              CURRENT
+              APPLICATION INFORMATION</p>
+          </td>
+        </tr>
+        <tr style="height:101px;">
+          <td
+            style="width:100%;border-top-style:solid;border-top-width:1px;border-top-color:#E4E4E4;border-left-style:solid;border-left-width:1px;border-left-color:#E4E4E4;border-bottom-style:solid;border-bottom-width:1px;border-bottom-color:#E4E4E4;border-right-style:solid;border-right-width:1px;border-right-color:#E4E4E4"
+            colspan="5">
+            <p class="s4" style="padding-top: 4px;padding-left: 5px;text-indent: 0px;text-align: left;">These are
+              the details you give us when you apply for your Experian Credit Report.</p>
+            <div class="row" style="padding:24px;">
+              <div class="col-md-4">
+                <div class="row">
+                  <div class='col-md-5'>
+                    <p class="s5" style="padding-top: 4px;padding-left: 5px;text-indent: 0px;text-align: left;">Name
+                    </p>
+                    <p class="s5" style="padding-top: 4px;padding-left: 5px;text-indent: 0px;text-align: left;">Mobile
+                      Phone
+                    </p>
+                    <p class="s5" style="padding-top: 4px;padding-left: 5px;text-indent: 0px;text-align: left;">Passport
+                      Number </p>
+                    <p class="s5" style="padding-top: 4px;padding-left: 5px;text-indent: 0px;text-align: left;">Email
+                    </p>
+                  </div>
+                  <div class="col-md-7">
+                    <p><span class="s6">Subhadip Bandyopadhyay</span></p>
+                    <p><span class="s6">9933648398 </span></p>
+                    <p><span class="s6"> - </span></p>
+                    <p><span class="s6">subhodip.banerjee29@gmail.com</span></p>
+                  </div>
+
+                </div>
+              </div>
+              <div class="col-md-4">
+                <div class="row">
+                  <div class="col-md-5">
+                    <p class="s5" style="padding-top: 4px;padding-left: 5px;text-indent: 0px;text-align: left;">
+                      Telephone </p>
+                    <p class="s5" style="padding-top: 4px;padding-left: 5px;text-indent: 0px;text-align: left;">PAN
+                    </p>
+                    <p class="s5" style="padding-top: 4px;padding-left: 5px;text-indent: 0px;text-align: left;">
+                      Voter ID </p>
+                    <p class="s6" style="padding-top: 4px;padding-left: 5px;text-indent: 0px;text-align: left;">
+                      <a href="mailto:subhodip.banerjee29@gmail.com"
+                        style=" color: #0070C0; font-family:&quot;Times New Roman&quot;, serif; font-style: normal; font-weight: bold; text-decoration: none; font-size: 17px;"
+                        target="_blank">Aadhaar Number </a></p>
+                  </div>
+                  <div class="col-md-7">
+                    <p><span class="s6">-</span></p>
+                    <p>
+                      <span class="s6">BNFPB6672J</span>
+                    </p>
+                    <p>
+                      <span class="s6">-</span>
+                    </p>
+                    <p>
+                      <span class="s6">-</span>
+                    </p>
+                  </div>
+                </div>
+                <!-- <p class="s5" style="padding-top: 4px;padding-left: 5px;text-indent: 0px;text-align: left;">Telephone <span
+                      class="s6"></span></p>
+                    <p class="s5" style="padding-top: 4px;padding-left: 5px;text-indent: 0px;text-align: left;">PAN
+                        <span class="s6">BNFPB6672J</span></p>
+                    <p class="s5" style="padding-top: 4px;padding-left: 5px;text-indent: 0px;text-align: left;">
+                      Voter ID </p>
+                    <p class="s6"
+                        style="padding-top: 4px;padding-left: 5px;text-indent: 0px;text-align: left;">
+                        <a href="mailto:subhodip.banerjee29@gmail.com"
+                            style=" color: #0070C0; font-family:&quot;Times New Roman&quot;, serif; font-style: normal; font-weight: bold; text-decoration: none; font-size: 17px;"
+                            target="_blank">Aadhaar Number </a></p> -->
+
+              </div>
+              <div class="col-md-4">
+                <p class="s5" style="padding-top: 4px;padding-left: 5px;text-indent: 0px;text-align: left;"> <span
+                    class="s6"></span></p>
+                <p class="s5" style="padding-top: 4px;padding-left: 5px;text-indent: 0px;text-align: left;">
+                  <span class="s6"></span></p>
+                <p class="s5" style="padding-top: 4px;padding-left: 5px;text-indent: 0px;text-align: left;">
+                  Driving License </p>
+                <p class="s5"
+                  style="padding-top: 4px;padding-left: 271px;padding-right: 51px;text-indent: -266px;line-height: 167%;text-align: left;">
+                  Ration Card</p>
+              </div>
+            </div>
+          </td>
+        </tr>
+        <tr style="height:19px;">
+          <td
+            style="width:100%;border-top-style:solid;border-top-width:1px;border-top-color:#E4E4E4;border-left-style:solid;border-left-width:1px;border-left-color:#E4E4E4;border-bottom-style:solid;border-bottom-width:1px;border-bottom-color:#E4E4E4;border-right-style:solid;border-right-width:1px;border-right-color:#E4E4E4"
+            colspan="5">
+            <p class="s3"
+              style="padding-top: 4px;padding-left: 24px;text-indent: 0px;text-align: left; background-color: #fafafa;">
+              EXPERIAN
+              CREDIT SCORE</p>
+          </td>
+        </tr>
+        <tr style="height:112px;">
+          <td
+            style="width:100%;border-top-style:solid;border-top-width:1px;border-top-color:#E4E4E4;border-left-style:solid;border-left-width:1px;border-left-color:#E4E4E4;border-bottom-style:solid;border-bottom-width:1px;border-bottom-color:#E4E4E4;border-right-style:solid;border-right-width:1px;border-right-color:#E4E4E4"
+            colspan="5">
+            <p class="s4" style="padding-top: 4px;padding-left: 6px;text-indent: 0px;text-align: left;">Your
+              Experian Credit Report is summarized in the form of Experian Credit Score which ranges from 300 -
+              900.
+            </p>
+            <div class="row">
+              <div class="col-md-4">
+                <div id="canvas-holder" style="width:100%">
+                  <canvas id="chart"></canvas>
+                </div>
+                <!-- <button id="randomizeData">Randomize Data</button> -->
+              </div>
+              <div class="col-md-8">
+                <div class=" " style="border: 1px solid #e4e4e4; width:80%; margin: 10px 0; padding: 0 10px;">
+                  <p style="text-indent: 0px;text-align: left;"><br /></p>
+                  <p class="s8" style="text-indent: 0px;text-align: left;">Score Factors</p>
+                  <ol id="l1" style="margin-left: 10px;">
+                    <li data-list-text="1.">
+                      <p class="s3" style="text-indent: -12px;padding-top: 4px;text-align: left;">
+                        <span>1.</span><b>Recency : </b><span class="s9">Recent Credit Account Defaults</span></p>
+                    </li>
+                    <!-- <li data-list-text="2.">
+                          
+                          <p class="s3"
+                              style="padding-top: 4px;text-indent: 0px;line-height: 18px;text-align: left;">
+                              2. <b>Leverage : </b><span class="s9"></span>Credit Accounts with on-time re-payment history</span>
+                          </p>
+                        </li>  -->
+                    <li data-list-text="2.">
+                      <p class="s3" style="padding-top: 4px; text-indent: -12px;text-align: left;">
+                        <span>2.</span>Leverage : <span class="s9">Credit Accounts with on-time re-payment
+                          history</span></p>
+                    </li>
+
+                    <li data-list-text="3.">
+                      <p class="s3" style="padding-top: 4px; text-indent: -12px; text-align: left;">
+                        <span>3.</span>Coverage : <span class="s9">Non-delinquent and delinquent Credit Accounts</span>
+                      </p>
+                    </li>
+                    <li data-list-text="4.">
+                      <p class="s3" style="padding-top: 4px;text-indent: -12px;text-align: left;">
+                        <span>4.</span>Delinquency Status : <span class="s9">Defaults on Credit Accounts (current &amp;
+                          recent
+                          periodic intervals)</span></p>
+                    </li>
+                    <li data-list-text="5.">
+                      <p class="s3" style="padding-top: 4px;text-indent: -12px;text-align: left;">
+                        <span>5.</span>Credit Applications : <span class="s9">Credit Account Applications over last 30
+                          days</span>
+                      </p>
+                    </li>
+                  </ol>
+                </div>
+              </div>
+            </div>
+          </td>
+        </tr>
+        <tr style="height:12px;">
+          <td
+            style="width:100%;border-top-style:solid;border-top-width:1px;border-top-color:#E4E4E4;border-left-style:solid;border-left-width:1px;border-left-color:#E4E4E4;border-bottom-style:solid;border-bottom-width:1px;border-bottom-color:#E4E4E4;border-right-style:solid;border-right-width:1px;border-right-color:#E4E4E4"
+            colspan="5">
+            <p style="text-indent: 0px;text-align: left;"><br /></p>
+          </td>
+        </tr>
+        <tr style="height:19px;">
+          <td
+            style="width:100%;border-top-style:solid;border-top-width:1px;border-top-color:#E4E4E4;border-left-style:solid;border-left-width:1px;border-left-color:#E4E4E4;border-bottom-style:solid;border-bottom-width:1px;border-bottom-color:#E4E4E4;border-right-style:solid;border-right-width:1px;border-right-color:#E4E4E4"
+            colspan="5">
+            <p class="s3"
+              style="padding-top: 4px;padding-left: 24px;text-indent: 0px;text-align: left; background-color: #fafafa;">
+              REPORT
+              SUMMARY</p>
+          </td>
+        </tr>
+        <tr style="height:16px;">
+          <td
+            style="width:147px;border-top-style:solid;border-top-width:1px;border-top-color:#E4E4E4;border-left-style:solid;border-left-width:1px;border-left-color:#E4E4E4;border-right-style:solid;border-right-width:1px;border-right-color:#E4E4E4">
+            <p class="s5" style="padding-top: 4px;padding-left: 6px;text-indent: 0px;text-align: left;">Credit
+              Account Summary</p>
+          </td>
+          <td
+            style="width:144px;border-top-style:solid;border-top-width:1px;border-top-color:#E4E4E4;border-left-style:solid;border-left-width:1px;border-left-color:#E4E4E4;border-right-style:solid;border-right-width:1px;border-right-color:#E4E4E4">
+            <p class="s5" style="padding-top: 4px;padding-left: 3px;text-indent: 0px;text-align: left;">Current
+              Balance Amount Summary</p>
+          </td>
+          <td
+            style="width:101px;border-top-style:solid;border-top-width:1px;border-top-color:#E4E4E4;border-left-style:solid;border-left-width:1px;border-left-color:#E4E4E4">
+            <p class="s5" style="padding-top: 4px;padding-left: 3px;text-indent: 0px;text-align: left;">Credit
+              Enquiry Summary</p>
+          </td>
+          <td
+            style="width:42px;border-top-style:solid;border-top-width:1px;border-top-color:#E4E4E4;border-right-style:solid;border-right-width:1px;border-right-color:#E4E4E4">
+            <p style="text-indent: 0px;text-align: left;"><br /></p>
+          </td>
+          <td
+            style="width:148px;border-top-style:solid;border-top-width:1px;border-top-color:#E4E4E4;border-left-style:solid;border-left-width:1px;border-left-color:#E4E4E4;border-right-style:solid;border-right-width:1px;border-right-color:#E4E4E4">
+            <p class="s5" style="padding-top: 4px;padding-left: 3px;text-indent: 0px;text-align: left;">Non-Credit
+              Enquiry Summary</p>
+          </td>
+        </tr>
+        <tr style="height:16px;">
+          <td
+            style="width:147px;border-left-style:solid;border-left-width:1px;border-left-color:#E4E4E4;border-right-style:solid;border-right-width:1px;border-right-color:#E4E4E4">
+            <p class="s11" style="padding-top: 3px;padding-left: 6px;text-indent: 0px;text-align: left;">Total
+              number of Accounts <span style=" color: #333;">6</span></p>
+          </td>
+          <td
+            style="width:144px;border-left-style:solid;border-left-width:1px;border-left-color:#E4E4E4;border-right-style:solid;border-right-width:1px;border-right-color:#E4E4E4">
+            <p class="s11" style="padding-top: 3px;padding-left: 3px;text-indent: 0px;text-align: left;">Total
+              Current Bal. amt <span style=" color: #333;">1,23,595</span></p>
+          </td>
+          <td style="width:101px;border-left-style:solid;border-left-width:1px;border-left-color:#E4E4E4">
+            <p class="s11" style="padding-top: 3px;padding-left: 3px;text-indent: 0px;text-align: left;">Last 7 days
+              credit enquiries</p>
+          </td>
+          <td style="width:42px;border-right-style:solid;border-right-width:1px;border-right-color:#E4E4E4">
+            <p class="s6" style="padding-top: 3px;padding-left: 11px;text-indent: 0px;text-align: left;">0</p>
+          </td>
+          <td
+            style="width:148px;border-left-style:solid;border-left-width:1px;border-left-color:#E4E4E4;border-right-style:solid;border-right-width:1px;border-right-color:#E4E4E4">
+            <p class="s11" style="padding-top: 3px;padding-left: 3px;text-indent: 0px;text-align: left;">Last 7 days
+              non-credit enquiries</p>
+          </td>
+        </tr>
+        <tr style="height:16px;">
+          <td
+            style="width:147px;border-left-style:solid;border-left-width:1px;border-left-color:#E4E4E4;border-right-style:solid;border-right-width:1px;border-right-color:#E4E4E4">
+            <p class="s11" style="padding-top: 3px;padding-left: 6px;text-indent: 0px;text-align: left;">Active
+              Accounts <span style=" color: #333;">3</span></p>
+          </td>
+          <td
+            style="width:144px;border-left-style:solid;border-left-width:1px;border-left-color:#E4E4E4;border-right-style:solid;border-right-width:1px;border-right-color:#E4E4E4">
+            <p class="s11" style="padding-top: 3px;padding-left: 3px;text-indent: 0px;text-align: left;">
+              SF/WD/WO/Settled amt <span style=" color: #333;">0</span></p>
+          </td>
+          <td style="width:101px;border-left-style:solid;border-left-width:1px;border-left-color:#E4E4E4">
+            <p class="s11" style="padding-top: 3px;padding-left: 3px;text-indent: 0px;text-align: left;">Last 30
+              days credit enquiries</p>
+          </td>
+          <td style="width:42px;border-right-style:solid;border-right-width:1px;border-right-color:#E4E4E4">
+            <p class="s6" style="padding-top: 3px;padding-left: 11px;text-indent: 0px;text-align: left;">0</p>
+          </td>
+          <td
+            style="width:148px;border-left-style:solid;border-left-width:1px;border-left-color:#E4E4E4;border-right-style:solid;border-right-width:1px;border-right-color:#E4E4E4">
+            <p class="s11" style="padding-top: 3px;padding-left: 3px;text-indent: 0px;text-align: left;">Last 30
+              days non-credit enquiries</p>
+          </td>
+        </tr>
+        <tr style="height:16px;">
+          <td
+            style="width:147px;border-left-style:solid;border-left-width:1px;border-left-color:#E4E4E4;border-right-style:solid;border-right-width:1px;border-right-color:#E4E4E4">
+            <p class="s11" style="padding-top: 3px;padding-left: 6px;text-indent: 0px;text-align: left;">Closed
+              Accounts <span style=" color: #333;">3</span></p>
+          </td>
+          <td
+            style="width:144px;border-left-style:solid;border-left-width:1px;border-left-color:#E4E4E4;border-right-style:solid;border-right-width:1px;border-right-color:#E4E4E4">
+            <p class="s11" style="padding-top: 3px;padding-left: 3px;text-indent: 0px;text-align: left;">Secured
+              Accounts amt <span style=" color: #333;">0</span></p>
+          </td>
+          <td style="width:101px;border-left-style:solid;border-left-width:1px;border-left-color:#E4E4E4">
+            <p class="s11" style="padding-top: 3px;padding-left: 3px;text-indent: 0px;text-align: left;">Last 90
+              days credit enquiries</p>
+          </td>
+          <td style="width:42px;border-right-style:solid;border-right-width:1px;border-right-color:#E4E4E4">
+            <p class="s6" style="padding-top: 3px;padding-left: 11px;text-indent: 0px;text-align: left;">0</p>
+          </td>
+          <td
+            style="width:148px;border-left-style:solid;border-left-width:1px;border-left-color:#E4E4E4;border-right-style:solid;border-right-width:1px;border-right-color:#E4E4E4">
+            <p class="s11" style="padding-top: 3px;padding-left: 3px;text-indent: 0px;text-align: left;">Last 90
+              days non-credit enquiries</p>
+          </td>
+        </tr>
+        <tr style="height:15px;">
+          <td
+            style="width:147px;border-left-style:solid;border-left-width:1px;border-left-color:#E4E4E4;border-bottom-style:solid;border-bottom-width:1px;border-bottom-color:#E4E4E4;border-right-style:solid;border-right-width:1px;border-right-color:#E4E4E4">
+            <p class="s11" style="padding-top: 3px;padding-left: 6px;text-indent: 0px;text-align: left;">
+              SF/WD/WO/SET/RES <span style=" color: #333;">0</span></p>
+          </td>
+          <td
+            style="width:144px;border-left-style:solid;border-left-width:1px;border-left-color:#E4E4E4;border-bottom-style:solid;border-bottom-width:1px;border-bottom-color:#E4E4E4;border-right-style:solid;border-right-width:1px;border-right-color:#E4E4E4">
+            <p class="s11" style="padding-top: 3px;padding-left: 3px;text-indent: 0px;text-align: left;">Unsecured
+              Accounts amt <span style=" color: #333;">1,23,595</span></p>
+          </td>
+          <td
+            style="width:101px;border-left-style:solid;border-left-width:1px;border-left-color:#E4E4E4;border-bottom-style:solid;border-bottom-width:1px;border-bottom-color:#E4E4E4">
+            <p class="s11" style="padding-top: 3px;padding-left: 3px;text-indent: 0px;text-align: left;">Last 180
+              days credit enquiries</p>
+          </td>
+          <td
+            style="width:42px;border-bottom-style:solid;border-bottom-width:1px;border-bottom-color:#E4E4E4;border-right-style:solid;border-right-width:1px;border-right-color:#E4E4E4">
+            <p class="s6" style="padding-top: 3px;padding-left: 11px;text-indent: 0px;text-align: left;">0</p>
+          </td>
+          <td
+            style="width:148px;border-left-style:solid;border-left-width:1px;border-left-color:#E4E4E4;border-bottom-style:solid;border-bottom-width:1px;border-bottom-color:#E4E4E4;border-right-style:solid;border-right-width:1px;border-right-color:#E4E4E4">
+            <p class="s11" style="padding-top: 3px;padding-left: 3px;text-indent: 0px;text-align: left;">Last 180
+              days non-credit enquiries</p>
+          </td>
+        </tr>
+        <tr style="height:12px;">
+          <td
+            style="width:100%;border-top-style:solid;border-top-width:1px;border-top-color:#E4E4E4;border-left-style:solid;border-left-width:1px;border-left-color:#E4E4E4;border-bottom-style:solid;border-bottom-width:1px;border-bottom-color:#E4E4E4;border-right-style:solid;border-right-width:1px;border-right-color:#E4E4E4"
+            colspan="5">
+            <p style="text-indent: 0px;text-align: left;"><br /></p>
+          </td>
+        </tr>
+        <tr style="height:19px;">
+          <td
+            style="width:100%;border-top-style:solid;border-top-width:1px;border-top-color:#E4E4E4;border-left-style:solid;border-left-width:1px;border-left-color:#E4E4E4;border-bottom-style:solid;border-bottom-width:1px;border-bottom-color:#E4E4E4;border-right-style:solid;border-right-width:1px;border-right-color:#E4E4E4"
+            colspan="5">
+            <p class="s3"
+              style="padding-top: 4px;padding-left: 24px;text-indent: 0px;text-align: left; background-color: #fafafa;">
+              SUMMARY:
+              CREDIT ACCOUNT INFORMATION</p>
+          </td>
+        </tr>
+        <tr>
+          <td
+            style="width:100%;border-top-style:solid;border-top-width:1px;border-top-color:#E4E4E4;border-left-style:solid;border-left-width:1px;border-left-color:#E4E4E4;border-right-style:solid;border-right-width:1px;border-right-color:#E4E4E4"
+            colspan="5">
+            <p class="s4" style="padding-top: 4px;padding-left: 6px;text-indent: 0px;text-align: left;">This section
+              displays summary of all your reported credit accounts found in the Experian Credit Bureau database.
+            </p>
+          </td>
+        </tr>
+        <tr>
+          <td
+            style="padding:12px;width:100%;border-top-style:solid;border-top-width:1px;border-top-color:#E4E4E4;border-left-style:solid;border-left-width:1px;border-left-color:#E4E4E4;border-bottom-style:solid;border-bottom-width:1px;border-bottom-color:#E4E4E4;border-right-style:solid;border-right-width:1px;border-right-color:#E4E4E4"
+            colspan="5">
+            <table class="table table-borderless" style="font-size: 12px;">
+              <thead>
+                <tr>
+                  <th class="s5" style="padding-top: 4px;padding-left: 6px;text-indent: 0px;text-align: left;">#</th>
+                  <th class="s5" style="padding-top: 4px;padding-left: 6px;text-indent: 0px;text-align: left;">Lender
+                  </th>
+                  <th class="s5" style="padding-top: 4px;padding-left: 6px;text-indent: 0px;text-align: left;">Account
+                    type</th>
+                  <th class="s5" style="padding-top: 4px;padding-left: 6px;text-indent: 0px;text-align: left;">Account
+                    No</th>
+                  <th class="s5" style="padding-top: 4px;padding-left: 6px;text-indent: 0px;text-align: left;">Ownership
+                  </th>
+                  <th class="s5" style="padding-top: 4px;padding-left: 6px;text-indent: 0px;text-align: left;">Date
+                    Reported</th>
+                  <th class="s5" style="padding-top: 4px;padding-left: 6px;text-indent: 0px;text-align: left;">Account
+                    Status</th>
+                  <th class="s5" style="padding-top: 4px;padding-left: 6px;text-indent: 0px;text-align: left;">Date
+                    Opened</th>
+                  <th class="s5" style="padding-top: 4px;padding-left: 6px;text-indent: 0px;text-align: left;">anction
+                    Amt / Highest Credit</th>
+                  <th class="s5" style="padding-top: 4px;padding-left: 6px;text-indent: 0px;text-align: left;">
+                    Current Balance
+                  </th>
+                  <th class="s5" style="padding-top: 4px;padding-left: 6px;text-indent: 0px;text-align: left;">Amount
+                    Overdue</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="s5">Acct 1</td>
+                  <td>TVS Credit Service</td>
+                  <td>TWO WHEELER LOAN</td>
+                  <td>KO3054TW0075403</td>
+                  <td>Individual</td>
+                  <td>31-08-2019</td>
+                  <td>CLOSED</td>
+                  <td>31-05-2017</td>
+                  <td>51,900</td>
+                  <td>0</td>
+                  <td>0</td>
+                </tr>
+                <tr>
+                  <td class="s5">Acct 2</td>
+                  <td>HDFC Bank Ltd </td>
+                  <td> CONSUMER LOAN</td>
+                  <td>0004815080002243870</td>
+                  <td>Individual</td>
+                  <td>30-09-2022</td>
+                  <td>CLOSED</td>
+                  <td>28-12-2017</td>
+                  <td>0</td>
+                  <td>0</td>
+                  <td>-</td>
+                </tr>
+                <tr>
+                  <td class="s5">Acct 3</td>
+                  <td>IndusInd Bank Limited</td>
+                  <td> CREDIT CARDS</td>
+                  <td>5244804099349003</td>
+                  <td>Individual</td>
+                  <td>31-03-2020</td>
+                  <td>ACTIVE*</td>
+                  <td>20-09-2019</td>
+                  <td>3,745</td>
+                  <td>-2,994</td>
+                  <td>-</td>
+                </tr>
+                <tr>
+                  <td class="s5">Acct 4</td>
+                  <td>Axis Bank</td>
+                  <td>CREDIT CARDS</td>
+                  <td>102000000150687</td>
+                  <td>Individual</td>
+                  <td>30-09-2022</td>
+                  <td>ACTIVE*</td>
+                  <td>28-02-2020</td>
+                  <td>40,354</td>
+                  <td>97,924</td>
+                  <td>0</td>
+                </tr>
+                <tr>
+                  <td class="s5">Acct 5</td>
+                  <td>Aditya Birla Finance ltd</td>
+                  <td>OTHER</td>
+                  <td>PYTMPPABFL13941811644082</td>
+                  <td>Individual</td>
+                  <td>30-09-2022</td>
+                  <td>CLOSED</td>
+                  <td>20-12-2021</td>
+                  <td>1,000</td>
+                  <td>0</td>
+                  <td>0</td>
+                </tr>
+                <tr>
+                  <td class="s5">Acct 6</td>
+                  <td>DMI Finance Private Limited</td>
+                  <td>CONSUMER LOAN</td>
+                  <td>DMI0021167845</td>
+                  <td>Individual</td>
+                  <td>30-09-2022</td>
+                  <td>ACTIVE*</td>
+                  <td>12-05-2022</td>
+                  <td>65,000</td>
+                  <td>28,665</td>
+                  <td>0</td>
+                </tr>
+              </tbody>
+            </table>
+          </td>
+        </tr>
+      </table>
+  </div>
+  <div class="credit-account-table">
+    <table style="border-collapse:collapse; margin: 0 50px;" cellspacing="0">
+      <tr style="height:19px;">
+        <td
+          style="width:100%;border-top-style:solid;border-top-width:1px;border-top-color:#E4E4E4;border-left-style:solid;border-left-width:1px;border-left-color:#E4E4E4;border-bottom-style:solid;border-bottom-width:1px;border-bottom-color:#E4E4E4;border-right-style:solid;border-right-width:1px;border-right-color:#E4E4E4"
+          colspan="5">
+          <p class="s3"
+            style="padding-top: 4px;padding-left: 24px;text-indent: 0px;text-align: left; background-color: #fafafa;">
+            CREDIT
+            ACCOUNT INFORMATION DETAILS</p>
+        </td>
+      </tr>
+      <tr style="height:16px;">
+        <td
+          style="width:100%;border-top-style:solid;border-top-width:1px;border-top-color:#E4E4E4;border-left-style:solid;border-left-width:1px;border-left-color:#E4E4E4;border-bottom-style:solid;border-bottom-width:2px;border-bottom-color:#E4E4E4;border-right-style:solid;border-right-width:1px;border-right-color:#E4E4E4"
+          colspan="5">
+          <p class="s4" style="padding-top: 4px;padding-left: 7px;text-indent: 0px;text-align: left;">This section
+            has information based on the details provided to Experian by all our member banks, credit /
+            financial institutions and other credit grantors with whom you have a credit / loan account.</p>
+        </td>
+      </tr>
+      <tr style="height:85px;">
+        <td
+          style="width:100%;border-top-style:solid;border-top-width:2px;border-top-color:#E4E4E4;border-left-style:solid;border-left-width:2px;border-left-color:#E4E4E4;border-bottom-style:solid;border-bottom-width:1px;border-bottom-color:#E4E4E4;border-right-style:solid;border-right-width:1px;border-right-color:#E4E4E4"
+          colspan="5">
+          <p class="s5"
+            style="padding-top: 7px;padding-bottom: 3px;padding-left: 3px;text-indent: 0px;text-align: left;">
+            TWO WHEELER LOAN TVS Credit Services Limited <span>
+              <table border="0" cellspacing="0" cellpadding="0">
+                <tr>
+                  <!-- <td><img width="13" height="13"
+                                    src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA0AAAANCAYAAABy6+R8AAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAA7EAAAOxAGVKw4bAAABsUlEQVQokT2SsU9TcRSFv/Ne6wu2NU2VASuLYWDQQIialrjYN8jk4OCAg0YGE1f8DxrD7qbdZXFldiAxDg1sxUEdbJNWWqgUVKLS4/ADb3KTO9xz7peTq5svChgQFIGK8UOhO8Ak0AfeAW+AD8DQQFxOEwSXsVct6qBbwheMYpkC4rphCZwXagGHcTlNiuBVpGeyimBJSEgWEkhwXmiOMDcjoApaMRQQkiQQBGRPZHPMX6kayBuegKsRsAyUwpoJZQNkoiy12XvcX1hRMPFF0HIE1MAKAlmKHEcZhJifrvBocdUouNkSUMuElMKdyfyUKldTugdfvf9jl8eLz+kdtPW22eCMFyhlTmOdAjxdmuHBjaeMjr9rcNTzn5Pfer255o/dbYFRUPXjcposGK4JNPw5UHv/M7dn7pKNszQ219jpbskYWwRMb8TlNPkFXsLkTsZ/6Y06+tRvaae7pe32e409DmQBbU+oHpfTcwOhHGJOKBl77G+jDp3hF/l/mmA4Al4Jr8flNDk2tIQiYBY8gXWKHxIF9sANWS+R+mdvdAg0Q0uIS0AC6gIbQF1oHbEL8A+F1qKf13xFnQAAAABJRU5ErkJgggAA" />
+                            </td> -->
+                </tr>
+              </table>
+            </span><span class="s15"> </span><span class="s16">Acct 1</span></p>
+          <p style="padding-left: 3px;text-indent: 0px;line-height: 1px;text-align: left;" />
+          <p class="s3" style="padding-top: 5px;padding-left: 5px;text-indent: 0px;text-align: left;">Subhodip
+            Bandyopadhyay</p>
+          <p style="text-indent: 0px;text-align: left;"><br /></p>
+          <p class="s5" style="padding-left: 5px;text-indent: 0px;text-align: left;">Address 1 <span class="s6">DATTAPUR
+              TARAKESWAR HOOGLY HOOGHLY CHANDANNAGAR BALIGORI B.O West Bengal
+              712410</span></p>
+          <p class="s5" style="padding-top: 4px;padding-left: 5px;text-indent: 0px;text-align: left;">Address 2
+            <span class="s6">LORDS BUILDING 7/1 LORD SINHA ROAD ELGIN KOLKATA KOLKATA KOLKATA KOLKATA LITTLE
+              RUSSEL STREET S.O West Bengal 700071</span></p>
+        </td>
+      </tr>
+    </table>
+  </div>
+  <div class="credit-account-details-table">
+    <table class="credit-account-details">
+      <tr>
+        <p class="s5" style="padding-left: 5px;text-indent: 0px;text-align: left;">Credit Account details</p>
+      </tr>
+      <tr>
+        <div class="row no-margin">
+          <div class ="col-md-4 border no-padding">
+            <p class="s5-small border-bottom" style="padding-left: 5px;text-indent: 0px;text-align: left;">Account terms</p>
+            <div class="ac-term">
+              <div class="ac-wrapper">
+                <div class="div-layout">
+                  <span class="s11">Account Number</span>
+                  <span>KO3054TW0075403</span>
+                </div>
+                <div class="div-layout">
+                  <span class="s11">Date Opened</span>
+                  <span>31-05-2017</span>
+                </div>
+                <div class="div-layout">
+                  <span class="s11">Date Closed</span>
+                  <span>08-06-2019</span>
+                </div>
+                <div class="div-layout">
+                  <span class="s11">Ownership</span>
+                  <span>Individual</span>
+                </div>
+                <div class="div-layout">
+                  <span class="s11">Rate of Interest</span>
+                  <span>12.000</span>
+                </div>
+                <div class="div-layout">
+                  <span class="s11">Value of Collateral</span>
+                  <span>-</span>
+                </div>
+                <div class="div-layout">
+                  <span class="s11">Type of Collateral</span>
+                  <span>-</span>
+                </div>
+                <div class="div-layout">
+                  <span class="s11">SuitFiled Willful Default WrittenOff Status</span>
+                  <span>31-05-2017</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class ="col-md-4 border no-padding">
+            <p class="s5-small border-bottom" style="padding-left: 5px;text-indent: 0px;text-align: left;"> Account description</p>
+            <div class="ac-desc">
+              <div class="ac-wrapper">
+                <div class="div-layout">
+                  <span class="s11">Date Reported</span>
+                  <span>31-08-2019</span>
+                </div>
+                <div class="div-layout">
+                  <span class="s11">Loan Type</span>
+                  <span>TWO WHEELER LOAN</span>
+                </div>
+                <div class="div-layout">
+                  <span class="s11">Account Status</span>
+                  <span>CLOSED</span>
+                </div>
+                <div class="div-layout">
+                  <span class="s11">Sanctioned Amt</span>
+                  <span>51,900</span>
+                </div>
+                <div class="div-layout">
+                  <span class="s11">Current Balance</span>
+                  <span>0</span>
+                </div>
+                <div class="div-layout">
+                  <span class="s11">Amount Overdue</span>
+                  <span>0</span>
+                </div>
+                <div class="div-layout">
+                  <span class="s11">Last Payment Date</span>
+                  <span>08-06-2019</span>
+                </div>
+                <div class="div-layout">
+                  <span class="s11">SuitFiled Willful Default</span>
+                  <span>No Suit filed</span>
+                </div>
+              </div>
+              
+            </div>
+          </div>
+          <div class ="col-md-4 border no-padding">
+            <p class="s5-small border-bottom" style="padding-left: 5px;text-indent: 0px;text-align: left;">Account details</p>
+            <div class="ac-details">
+              <div class="ac-wrapper">
+                <div class="div-layout">
+                  <span class="s11">Credit Limit Amt</span>
+                  <span>-</span>
+                </div>
+                <div class="div-layout">
+                  <span class="s11">EMI</span>
+                  <span>-</span>
+                </div>
+                <div class="div-layout">
+                  <span class="s11">Repayment Tenure </span>
+                  <span>24</span>
+                </div>
+                <div class="div-layout">
+                  <span class="s11">Total Write-off Amt</span>
+                  <span>-</span>
+                </div>
+                <div class="div-layout">
+                  <span class="s11">Principal Write-off</span>
+                  <span>-</span>
+                </div>
+                <div class="div-layout">
+                  <span class="s11">Settlement Amt</span>
+                  <span>-</span>
+                </div>
+                <br/>
+                <!-- <div class="div-layout">
+                  <span class="s11"></span>
+                  <span></span>
+                </div> -->
+                <div class="div-layout">
+                  <span class="s11">Written off Settled Statust</span>
+                  <span></span>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+      </tr>
+    </table>
+  </div>
+
+
+</body>
+
+</html>

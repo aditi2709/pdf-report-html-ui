@@ -1,0 +1,29 @@
+.credit-account-details-table{
+    margin: 0 50px;
+    border: 1px solid #e4e4e4;
+}
+.border{
+    border: 1px solid #e4e4e4;
+}
+.no-margin{
+    margin-left: unset !important;
+    margin-right: unset !important;
+}
+.no-padding{
+    padding-left: unset !important;
+    padding-right: unset !important;
+}
+.ac-wrapper{
+    padding: 10px;
+}
+.div-layout{
+    display: flex;
+    justify-content: space-between;
+    padding: 5px 0;
+}
+.border-bottom{
+    border-bottom: 1px solid #e4e4e4;
+}
+.div-layout span{
+    font-family: "Times New Roman", serif;
+}
